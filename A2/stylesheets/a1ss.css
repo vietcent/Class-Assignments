@@ -1,0 +1,110 @@
+/*A1
+a1ss.css
+Summer 2015
+Vincent Nguyen*/
+
+
+/* selector {attribute: value;} */
+
+body
+{
+    width: 80%;
+    color: lightskyblue;
+    margin: auto;
+    font-weight: bold;
+    font-family: Calibri, Helvetica, Verdana, Arial, sans-serif;
+    background-color: whitesmoke;
+
+}
+
+#header
+{
+    width: 1100px;
+    height: 110px;
+    margin: auto;
+    font-size: 120%;
+    text-align: center;
+    margin-bottom: 7%;
+    border-bottom: 1px solid lightskyblue;
+
+}
+
+.m1, .m2, .m3
+{
+    display: inline-block;
+    padding: 4% 9% 0% 9%;
+}
+
+.left
+{
+    float: left;
+}
+
+.right
+{
+    float: right;
+}
+
+table
+{
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+    margin-bottom: 4%;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+
+table a:hover
+{
+    color: white;
+}
+
+table a:link
+{
+    text-transform: none;
+}
+
+td:hover
+{
+    background-color: lightskyblue;
+}
+
+table, th, td
+{
+    border: 1px solid lightskyblue;
+}
+
+#main
+{
+    margin-top: 8%;
+    font-size: 150%;
+    text-align: center;
+}
+
+#main img
+{
+    width: 70px;
+    height: 80px;
+    padding: 0% 6% 1% 6%;
+}
+
+#footer
+{
+    margin: auto;
+    font-size: 60%;
+    text-align: center;
+    border-top: 1px solid lightskyblue;
+    padding-top: 2px;
+}
+
+a:link
+{
+    color: red;
+
+}
+
+a:visited
+{
+    color: gray;
+}

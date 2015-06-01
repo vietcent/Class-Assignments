@@ -1,0 +1,130 @@
+/*
+a2Styles.css
+Vincent Nguyen*/
+
+
+body
+{
+	width: 95%;
+	color: royalblue;
+	color: #4169e1;
+	margin: auto;
+	font-weight: bold;
+	font-family: Calibri, Helvetica, Verdana, Arial, sans-serif;
+	background-color: whitesmoke;
+
+}
+
+#header
+{
+	height: 120px;
+	clear: both;
+	font-size: 120%;
+	text-align: center;
+	margin-bottom: 7%;
+	border-bottom: 1px solid lightskyblue;
+}
+
+.sh1
+{
+	font-size: 125%;
+	font-weight: bold;
+
+}
+
+.sh2
+{
+	font-size: 110%;
+	font-weight: bold;
+
+}
+
+#navigation
+{
+	width: 155px;
+	float: left;
+	padding-left: 5px;
+	padding-bottom: 100px;
+}
+
+#external
+{
+	width: 155px;
+	float: right;
+	text-align: right;
+	padding-right: 5px;
+}
+
+#external img
+{
+	width: 62px;
+	height: 86px;
+	border: none;
+	padding-bottom: 20px;
+}
+
+#main
+{
+	width: 155px;
+	float: left;
+	text-align: center;
+}
+
+#form
+{
+	width: 35%;
+	margin: auto;
+	border: thin solid royalblue;
+	margin-top: 5px;
+	padding-left: 5px;
+	background-color: palegreen;
+}
+
+#footer
+{
+    margin: auto;
+    font-size: 60%;
+    text-align: center;
+    border-top: 1px solid lightskyblue;
+    padding-top: 2px;
+	margin-top: 25px;
+}
+
+.submit
+{
+	text-align: center;
+}
+
+.submit input
+{
+	color: #ffffff;
+	font-size: 95%;
+	font-style: italic;
+	font-weight: bold;
+	background-color: #11dd11;
+}
+
+.reset input
+{
+	background-color: #11dd11;
+}
+
+.fh1
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+label
+{
+	width: 11em;
+	float: left;
+	text-align: left;
+}
+
+a:link
+{
+	color: #
+}
+a:hover
+a:visited
