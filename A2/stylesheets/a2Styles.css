@@ -123,7 +123,15 @@ label
 
 a:link
 {
-	color: #
+	color: rgba(178, 185, 100, 0.82);
 }
-a:hover
+
 a:visited
+{
+	color: black;
+}
+
+a:hover
+{
+	color: rgb(136, 33, 51);
+}
