@@ -63,7 +63,7 @@ Vincent Nguyen
     </div> -->
 
     <div id="form">
-        <form action="confirm.htm">
+        <form action="confirm.htm" onsubmit="return a2Validate()">
             <p>
                 <b><ins>Signup Form</ins></b>
                 <br />
@@ -90,7 +90,7 @@ Vincent Nguyen
 
                 <!-- probation -->
                 <label for="probation">Academic Probation?</label>
-                <input type="checkbox" id="probation" name="Probation" checked="checked" />
+                <input type="checkbox" id="probation" name="probation" />
                 <br/>
 
                 <!-- hotornot -->
@@ -123,7 +123,7 @@ Vincent Nguyen
                 <textarea id="comments" name="comments" rows="2" cols="49"></textarea>
         </p>
                 <p class="submit">
-                    <input type="submit" value="Sign me Up!" onclick= "return a2Validate()"/>
+                    <input type="submit" value="Sign me Up!" />
                     <span class="reset">
                         <input type="reset" value="Clear Form!" onclick="a2Focus()" />
                     </span>
