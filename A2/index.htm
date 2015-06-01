@@ -18,23 +18,23 @@ Vincent Nguyen
     <link type="text/css" rel="stylesheet" href="stylesheets/a2Styles.css" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="images/KanyeWest.ico/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/KanyeWest.ico/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/KanyeWest.ico/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/KanyeWest.ico/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/KanyeWest.ico/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/KanyeWest.ico/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/KanyeWest.ico/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/KanyeWest.ico/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/KanyeWest.ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/KanyeWest.ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/KanyeWest.ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/KanyeWest.ico/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/KanyeWest.ico/favicon-16x16.png">
-    <link rel="manifest" href="images/KanyeWest.ico/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/KanyeWest.ico/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/KanyeWest.ico/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/KanyeWest.ico/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/KanyeWest.ico/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/KanyeWest.ico/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/KanyeWest.ico/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/KanyeWest.ico/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/KanyeWest.ico/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/KanyeWest.ico/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/KanyeWest.ico/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/KanyeWest.ico/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/KanyeWest.ico/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="images/KanyeWest.ico/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/KanyeWest.ico/favicon-16x16.png" />
+    <link rel="manifest" href="images/KanyeWest.ico/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="images/KanyeWest.ico/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- JavaScript tags -->
     <script type="text/javascript" src="jscode/a2Focus.js"></script>
@@ -78,7 +78,7 @@ Vincent Nguyen
     </div> -->
 
     <div id="form">
-        <form>
+        <form action="confirm.htm">
             <p>
                 <b><ins>Signup Form</ins></b>
                 <br />
@@ -109,13 +109,13 @@ Vincent Nguyen
                 <br/>
 
                 <!-- hotornot -->
-                <label for="hotornot">Hot or Not?</label>
+                <label for="hotornoty">Hot or Not?</label>
                 Yes <input type="radio" id="hotornoty" name="hotornot" value="Yes" />
                 Not <input type="radio" id="hotornotn" name="hotornot" value="Not" />
                 <br />
 
                 <!-- smartornot -->
-                <label for="smartornot">Smart or Not?</label>
+                <label for="smartornoty">Smart or Not?</label>
                 Yes <input type="radio" id="smartornoty" name="smartornot" value="Yes" />
                 Not <input type="radio" id="smartornotn" name="smartornot" value="Not" />
                 <br />
@@ -138,7 +138,7 @@ Vincent Nguyen
                 <textarea id="comments" name="comments" rows="2" cols="49"></textarea>
         </p>
                 <p class="submit">
-                    <input type="submit" value="Sign me Up!" onclick="return a2Validate()" />
+                    <input type="submit" value="Sign me Up!" onsubmit= "return a2Validate()"/>
                     <span class="reset">
                         <input type="reset" value="Clear Form!" onclick="a2Focus()" />
                     </span>
