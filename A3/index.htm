@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
+Assignment 3
+index.htm
+CIS 425 Summer 2015
+Vincent Nguyen
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+  <head>
+    <!-- Meta tag -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+    <!-- Link tag for CSS -->
+    <link type="text/css" rel="stylesheet" href="../stylesheets/a2Styles.css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+
+    <!-- JavaScript tags -->
+    <script type="text/javascript" src="../jscode/a2Focus.js"></script>
+    <script type="text/javascript" src="../jscode/a2Validation.js"></script>
+
+    <!-- Web Page Title -->
+    <title>Vincent Nguyen Assignment 2</title>
+
+  </head>
+
+  <body onload="a2Focus">
+    <div id="header">
+      <p class="sh1">Vincent Nguyen</p>
+      <p class="sh2">A2</p>
+    </div>
+
+    <div id="navigation">
+      <p class="sh2">Site Navigation</p>
+      <p><a href="../A1/index.htm">Landing Page</a></p>
+      <p><a href="index.htm">A2</a></p>
+      <p><a href="../A3/index.htm">A3</a></p>
+      <p><a href="">A4</a></p>
+      <p><a href="index.htm">A5</a></p>
+      <p><a href="index.htm">A6</a></p>
+      <p><a href="index.htm">A7</a></p>
+      <p><a href="index.htm">A8</a></p>
+      <p><a href="../Project/index.html">Project</a></p>
+
+
+    </div>
+
+    <div id="external">
+      <p class="sh2">External Links</p>
+      <a href="http://www.linkedin.com" rel="external"><img src="../images/linkedInIcon.png" alt="LinkedIn"/></a>
+      <a href="https://www.twitter.com" rel="external"><img src="../images/twitterIcon.jpeg" alt="Twitter Website"/></a>
+      <a href="https://www.facebook.com" rel="external"><img src="../images/facebookIcon.png" alt ="Facebook Website"/></a>
+    </div>
+
+    <!-- <div id="main">
+        <h1>Vincent Nguyen</h1>
+    </div> -->
+
+    <div id="form">
+        <form action="confirm.htm" onsubmit="return a2Validate()">
+            <p>
+                <b><ins>Signup Form</ins></b>
+                <br />
+
+                <!-- Name -->
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" />
+                <br />
+
+                <!-- Username -->
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" />
+                <br />
+
+                <!-- Password -->
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" />
+                <br />
+
+                <!-- email -->
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email"/>
+                <br/>
+
+                <!-- probation -->
+                <label for="probation">Academic Probation?</label>
+                <input type="checkbox" id="probation" name="probation" />
+                <br/>
+
+                <!-- hotornot -->
+                <label for="hotornoty">Hot or Not?</label>
+                Yes <input type="radio" id="hotornoty" name="hotornot" value="Yes" />
+                Not <input type="radio" id="hotornotn" name="hotornot" value="Not" />
+                <br />
+
+                <!-- smartornot -->
+                <label for="smartornoty">Smart or Not?</label>
+                Yes <input type="radio" id="smartornoty" name="smartornot" value="Yes" />
+                Not <input type="radio" id="smartornotn" name="smartornot" value="Not" />
+                <br />
+
+                <!-- beers -->
+                <label for="beers">Favorite Beer?</label>
+                <select name="beers" id="beers">
+                    <option value="">Select a beer</option>
+                    <option value="heineken">Heineken</option>
+                    <option value="coorslight">Coors Light</option>
+                    <option value="pbr">PBR</option>
+                    <option value="bud">Budweiser</option>
+                    <option value="wickedApple">Wicked Apple</option>
+                    <option value="none">None (I am boring)</option>
+                </select>
+                <br/>
+
+                Why Should I Consider You For My Study Group?
+                <br/>
+                <textarea id="comments" name="comments" rows="2" cols="49"></textarea>
+        </p>
+                <p class="submit">
+                    <input type="submit" value="Sign me Up!" />
+                    <span class="reset">
+                        <input type="reset" value="Clear Form!" onclick="a2Focus()" />
+                    </span>
+                </p>
+        </form>
+
+    </div>
+
+    <div id="footer">
+    <p>
+        <img src="../images/xhtmlbtn.png" alt="Valid XHTML Icon" />
+        <img src="../images/cssbtn.gif" alt="Valid CSS Icon"/>
+        <br />
+        &copy;2015, Vincent Nguyen
+
+    </p>
+    </div>
+
+  </body>
+
+</html>
