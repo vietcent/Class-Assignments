@@ -24,17 +24,17 @@ Vincent Nguyen
     <!-- JavaScript tags -->
     <script type="text/javascript" src="../jscode/a3Focus.js"></script>
     <script type="text/javascript" src="../jscode/a3Validate.js"></script>
-    <script type="text/javascript" src="../jscode/jsmessages.js"></script>
+    <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
     <title>Vincent Nguyen Assignment 4</title>
 
   </head>
 
-  <body onload="a2Focus">
+  <body>
     <div id="header">
       <p class="sh1">Vincent Nguyen</p>
-      <p class="sh2">A2</p>
+      <p class="sh2">A4</p>
     </div>
 
     <div id="navigation">
@@ -42,7 +42,7 @@ Vincent Nguyen
       <p><a href="../A1/index.htm">Landing Page</a></p>
       <p><a href="index.htm">A2</a></p>
       <p><a href="../A3/index.htm">A3</a></p>
-      <p><a href="">A4</a></p>
+      <p><a href="index.htm">A4</a></p>
       <p><a href="index.htm">A5</a></p>
       <p><a href="index.htm">A6</a></p>
       <p><a href="index.htm">A7</a></p>
@@ -64,51 +64,85 @@ Vincent Nguyen
     </div> -->
 
     <div id="form">
-        <form action="confirm.htm" onsubmit="return a3Validate()">
+        <form action="confirm.htm">
             <p>
                 <b><ins>Signup Form</ins></b>
                 <br />
 
                 <!-- Name -->
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" />
+                <input type="text" id="name" name="name"
+                autofocus required
+                pattern="[a-zA-Z-' ]{4,30}"
+                title="Name: 4-30 chars, u/l case letters, -, or ' only!"
+                onfocus="message(this.id)"
+                />
                 <br />
 
                 <!-- Username -->
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" />
+                <input type="text" id="username" name="username"
+                required
+                pattern="[a-zA-Z0-9-_!$]{4,15}"
+                title="Username: 4 and 15 chars, -, _, !, $, u/l case letters, numbers only!"
+                onfocus="message(this.id)"/>
                 <br />
 
                 <!-- Password -->
                 <label for="password">Password</label>
-                <input type="text" id="password" name="password" />
+                <input type="password" id="password" name="password"
+                required
+                pattern="[a-zA-Z0-9-_!$]{5,15}"
+                title="Password: 5-15 chars, u/l case letters, -, _, !, $, and numbers only!"
+                onfocus="message(this.id)"/>
+                <br />
+
+                <!-- Re-enter -->
+                <label for="reenter">Re-enter Password</label>
+                <input type="password" id="reenter" name="reenter"
+                required
+                title="Passwords must match!"
+                onfocus="message(this.id)"/>
                 <br />
 
                 <!-- email -->
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email"/>
+                <input type="email" id="email" name="email"
+                required
+                pattern="[a-z0-9-_!$.]+@[a-z0-9-_.]+\.[a-z]{2,20}"
+                maxlength="50"
+                title="Valid email only! 50 chars max."
+                onfocus="message(this.id)"/>
                 <br/>
 
                 <!-- probation -->
                 <label for="probation">Academic Probation?</label>
-                <input type="checkbox" id="probation" name="probation" />
+                <input type="checkbox" id="probation" name="probation"
+                title="I don't care if you're on probation if you are hot!"
+                onfocus="message(this.id)" onclick="message(this.id)" />
                 <br/>
 
                 <!-- hotornot -->
                 <label for="hotornoty">Hot or Not?</label>
-                Yes <input type="radio" id="hotornoty" name="hotornot" value="Yes" />
-                Not <input type="radio" id="hotornotn" name="hotornot" value="Not" />
+                Yes <input type="radio" id="hotornoty" name="hotornot" value="Yes"
+                required title="come get this dick"
+                onfocus="message(this.id)" onclick="message(this.id)"/>
+                Not <input type="radio" id="hotornotn" name="hotornot" value="Not"
+                required title="do not come get this dick"
+                onfocus="message(this.id)" onclick="message(this.id)" />
                 <br />
 
                 <!-- smartornot -->
                 <label for="smartornoty">Smart or Not?</label>
-                Yes <input type="radio" id="smartornoty" name="smartornot" value="Yes" />
-                Not <input type="radio" id="smartornotn" name="smartornot" value="Not" />
+                Yes <input type="radio" id="smartornoty" name="smartornot" value="Yes" required title="I like smart people!"
+                onfocus="message(this.id" onclick="message(this.id)"/>
+                Not <input type="radio" id="smartornotn" name="smartornot" value="Not" title="Me neither..."
+                onfocus="message(this.id" onclick="message(this.id)"/>
                 <br />
 
                 <!-- beers -->
                 <label for="beers">Favorite Beer?</label>
-                <select name="beers" id="beers">
+                <select name="beers" id="beers" required onfocus="message(this.id)">
                     <option value="">Select a beer</option>
                     <option value="heineken">Heineken</option>
                     <option value="coorslight">Coors Light</option>
@@ -121,22 +155,24 @@ Vincent Nguyen
 
                 Why Should I Consider You For My Study Group?
                 <br/>
-                <textarea id="comments" name="comments" rows="2" cols="49"></textarea>
+                <textarea id="comments" name="comments" rows="2" cols="49" required maxlength="500"></textarea>
         </p>
                 <p class="submit">
                     <input type="submit" value="Sign me Up!" />
                     <span class="reset">
-                        <input type="reset" value="Clear Form!" onclick="a3Focus()" />
+                        <input type="reset" value="Clear Form!" onclick="history.go(0)" />
                     </span>
                 </p>
         </form>
 
     </div>
 
+    <p id="jsmsgs"></p>
+
     <div id="footer">
     <p>
-        <img src="../images/xhtmlbtn.png" alt="Valid XHTML Icon" />
-        <img src="../images/cssbtn.gif" alt="Valid CSS Icon"/>
+        <img src="../images/html5.png" alt="Valid HTML5 Icon" />
+        <img src="../images/css3.png" alt="Valid CSS3 Icon"/>
         <br />
         &copy;2015, Vincent Nguyen
 
