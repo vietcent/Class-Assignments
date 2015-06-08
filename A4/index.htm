@@ -22,8 +22,8 @@ Vincent Nguyen
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
 
     <!-- JavaScript tags -->
-    <script type="text/javascript" src="../jscode/a3Focus.js"></script>
-    <script type="text/javascript" src="../jscode/a3Validate.js"></script>
+    <!--<script type="text/javascript" src="../jscode/a3Focus.js"></script>
+    <script type="text/javascript" src="../jscode/a3Validate.js"></script>-->
     <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
@@ -85,6 +85,7 @@ Vincent Nguyen
                 required
                 pattern="[a-zA-Z0-9-_!$]{4,15}"
                 title="Username: 4 and 15 chars, -, _, !, $, u/l case letters, numbers only!"
+                onchange="form.reenter.patter=this.value;"
                 onfocus="message(this.id)"/>
                 <br />
 
@@ -125,24 +126,27 @@ Vincent Nguyen
                 <!-- hotornot -->
                 <label for="hotornoty">Hot or Not?</label>
                 Yes <input type="radio" id="hotornoty" name="hotornot" value="Yes"
-                required title="come get this dick"
+                required title="What's your number"
                 onfocus="message(this.id)" onclick="message(this.id)"/>
                 Not <input type="radio" id="hotornotn" name="hotornot" value="Not"
-                required title="do not come get this dick"
+                required title="do not be my partner"
                 onfocus="message(this.id)" onclick="message(this.id)" />
                 <br />
 
                 <!-- smartornot -->
                 <label for="smartornoty">Smart or Not?</label>
                 Yes <input type="radio" id="smartornoty" name="smartornot" value="Yes" required title="I like smart people!"
-                onfocus="message(this.id" onclick="message(this.id)"/>
+                onfocus="message(this.id)" onclick="message(this.id)" />
                 Not <input type="radio" id="smartornotn" name="smartornot" value="Not" title="Me neither..."
-                onfocus="message(this.id" onclick="message(this.id)"/>
+                onfocus="message(this.id)" onclick="message(this.id)" />
                 <br />
 
                 <!-- beers -->
                 <label for="beers">Favorite Beer?</label>
-                <select name="beers" id="beers" required onfocus="message(this.id)">
+                <select name="beers" id="beers"
+                required
+                title="Please select a beer"
+                onfocus="message(this.id)">
                     <option value="">Select a beer</option>
                     <option value="heineken">Heineken</option>
                     <option value="coorslight">Coors Light</option>
@@ -155,7 +159,9 @@ Vincent Nguyen
 
                 Why Should I Consider You For My Study Group?
                 <br/>
-                <textarea id="comments" name="comments" rows="2" cols="49" required maxlength="500"></textarea>
+                <textarea id="comments" name="comments" rows="2" cols="49" required maxlength="500"
+                title="Please enter your comments about yourself"
+                onfocus="message(this.id)"></textarea>
         </p>
                 <p class="submit">
                     <input type="submit" value="Sign me Up!" />
