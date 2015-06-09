@@ -176,3 +176,46 @@ select:valid{
 select:focus:invalid{
 	background: #f00;
 }
+
+textarea{
+	width: 420px;
+	border-radius: 10px;
+	padding: 2px;
+	background: #fff no-repeat top right;
+}
+
+textarea:required{
+	background-image: url("../images/required.png");
+}
+
+textarea:valid{
+	background-image: url("../images/valid.png");
+}
+
+textarea:focus:valid{
+	background-image: url("../images/invalid.png");
+}
+
+input[type=text], input[type=password], input[type=email]
+{
+	width: 230px;
+	padding: 2px;
+	border-radius: 10px;
+}
+
+input:not([type=submit]):not([type=checkbox]):not([type=reset])
+{
+	background: #fff no-repeat top right;
+}
+
+input:not([type=submit]):not([type=checkbox]):required{
+	background-image: url("../images/required.png");
+}
+
+input:not([type=submit]):not([type=checkbox]):valid{
+	background-image: url('../images/valid.png');
+}
+
+input:not([type=submit]):not([type=checkbox]):focus:invalid{
+	background-image: url("../images/invalid.png");
+}
