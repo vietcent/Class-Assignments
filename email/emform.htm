@@ -2,7 +2,7 @@
 
 <!--
 Assignment 5
-index.htm
+emform.htm
 CIS 425 Summer 2015
 Vincent Nguyen
 -->
@@ -27,26 +27,26 @@ Vincent Nguyen
     <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
-    <title>Vincent Nguyen Assignment 4</title>
+    <title>Vincent Nguyen Contact Us</title>
 
   </head>
 
   <body>
     <div id="header">
       <p class="sh1">Vincent Nguyen</p>
-      <p class="sh2">Email Confirmation</p>
+      <p class="sh2">Email Form</p>
     </div>
 
     <div id="navigation">
       <p class="sh2">Site Navigation</p>
       <p><a href="../A1/index.htm">Landing Page</a></p>
-      <p><a href="index.htm">A2</a></p>
+      <p><a href="../A2/index.htm">A2</a></p>
       <p><a href="../A3/index.htm">A3</a></p>
       <p><a href="../A4/index.htm">A4</a></p>
       <p><a href="../A5/index.htm">A5</a></p>
       <p><a href="../A6/index.htm">A6</a></p>
       <p><a href="../A7/index.htm">A7</a></p>
-      <p><a href="../A8index.htm">A8</a></p>
+      <p><a href="../A8/index.htm">A8</a></p>
       <p><a href="../Project/index.html">Project</a></p>
 
 
@@ -59,15 +59,49 @@ Vincent Nguyen
       <a href="https://www.facebook.com" target="_blank"><img src="../images/facebookIcon.png" alt ="Facebook Website"/></a>
     </div>
 
-    <!-- <div id="main">
-        <h1>Vincent Nguyen</h1>
-    </div> -->
+    <div id="main">
+    <p>Please fill in the blanks and hit the "Send Email" button</p>
+    </div>
 
     <div id="form">
-        <form action="index.htm">
+        <form action="https://webapp4.asu.edu/pubtools/Mail" method="post">
+            <p class="fh1">Email Form:</p>
+            <p>
+            <input name="sendto" type="hidden" value="dennis.anderson@asu.edu" />
+            <input name="subject" type="hidden" value="Website Contact Request" />
+            <input name="location" type="hidden" value="http://cis425a.wpcarey.asu.edu/vqnguye1/email/emthankyou.htm" />
 
+                <!-- Name -->
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name"
+                autofocus required
+                pattern="[a-zA-Z-' ]{4,30}"
+                title="Name: 4-30 chars, u/l case letters, -, or ' only!"
+                onfocus="message(this.id)"
+                />
+                <br />
+
+                <!-- email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"
+                required
+                pattern="[a-z0-9-_!$.]+@[a-z0-9-_.]+\.[a-z]{2,20}"
+                maxlength="50"
+                title="Valid email only! 50 chars max."
+                onfocus="message(this.id)"/>
+                <br/>
+
+                Comments
+                <br/>
+                <textarea id="comments" name="comments" rows="2" cols="49" required maxlength="500"
+                title="Please enter your comments about yourself"
+                onfocus="message(this.id)"></textarea>
+        </p>
                 <p class="submit">
-                    <input type="submit" value="Return"/>
+                    <input type="submit" value="Send Email!" formaction="emthankyou.htm" />
+                    <span class="reset">
+                        <input type="reset" value="Clear Form!" onclick="history.go(0)" />
+                    </span>
                 </p>
         </form>
 
@@ -79,9 +113,10 @@ Vincent Nguyen
     <div id="footer">
     <p>
         <img src="../images/html5.png" alt="Valid HTML5 Icon" />
-        <a href="emform.htm"<img src="../images/em3.png/" alt="Email Icon" /></a>
+        <a href="../email/emform.htm"><img src="../images/em3.png" alt="Email Icon" /></a>
         <img src="../images/css3.png" alt="Valid CSS3 Icon"/>
         <br />
+
         &copy;2015, Vincent Nguyen
 
     </p>
