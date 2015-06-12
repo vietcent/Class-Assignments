@@ -219,3 +219,15 @@ input:not([type=submit]):not([type=checkbox]):valid{
 input:not([type=submit]):not([type=checkbox]):focus:invalid{
 	background-image: url("../images/invalid.png");
 }
+
+.bold{
+	font-weight: bold;
+}
+
+.red{
+	color: red;
+}
+
+.green{
+	color: green;
+}
