@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-
 <!--
 Assignment 6
-index.htm
+check.php
 CIS 425 Summer 2015
 Vincent Nguyen
 -->
+
+<?php
+    //Start a PHP Session
+    session_start("cookie");
+
+?>
 
 <html lang="en">
 
@@ -27,14 +32,14 @@ Vincent Nguyen
     <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
-    <title>Vincent Nguyen Assignment 6</title>
+    <title>Vincent Nguyen PHP Check</title>
 
   </head>
 
   <body>
     <div id="header">
       <p class="sh1">Vincent Nguyen</p>
-      <p class="sh2">A6</p>
+      <p class="sh2">A6:Check</p>
     </div>
 
     <div id="navigation">
@@ -67,17 +72,33 @@ Vincent Nguyen
 
     <div id="icons">
 
-        <div id="icon1">
+        <!--<div id="icon1">
             <a href="create.php"><img src="../images/cm1.jpg" alt="Create!" /> </a>
-        </div>
+        </div>-->
 
         <div id="icon2">
-            <a href="check.php"><img src="../images/cm2.jpg" alt="Check!" /> </a>
+            <a href="index.htm"><img src="../images/cm4.jpg" alt="Check!" /> </a>
         </div>
 
-        <div id="icon3">
+        <!-- PHP starts -->
+        <?php
+            // Check to see if code exits
+            // in php. a "." is considered concatentation.
+            if (isset($_COOKIE["oreo"])) {
+
+                echo 'A cookie with a value of <span class="red">' .
+                    $_COOKIE["oreo"] . "</span> has been detected.";
+            }
+            else {
+                echo "No valid vookie in session for this browser.";
+            }
+
+        ?>
+        <!-- PHP ends -->
+
+        <!--<div id="icon3">
             <a href="delete.php"><img src="../images/cm3.jpg" alt="Delete!" /> </a>
-        </div>
+        </div>-->
 
     </div>
 
