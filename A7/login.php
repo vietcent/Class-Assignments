@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-
 <!--
-
 Assignment 6
-
-
-index.htm
+create.php
 CIS 425 Summer 2015
 Vincent Nguyen
 -->
+
+<?php
+    //Start a PHP Session
+    session_name("customer");
+    session_start("customer");
+    
+    // Check to see if customer is already logged in
+    if (isset($_SESSION['cusotmer']))
+    {
+        header('Location: welcome.php');
+        exit;
+    }
+
+?>
+<!-- End of PHP Session -->
 
 <html lang="en">
 
@@ -30,19 +41,14 @@ Vincent Nguyen
     <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
-    <title>Vincent Nguyen Assignment 6</title>
-
-
+    <title>Vincent Nguyen Login</title>
 
   </head>
 
   <body>
     <div id="header">
       <p class="sh1">Vincent Nguyen</p>
-
-      <p class="sh2">A6</p>
-
-      <p class="sh2">A5</p>
+      <p class="sh2">A7:Login</p>
     </div>
 
     <div id="navigation">
@@ -73,26 +79,54 @@ Vincent Nguyen
     <span class="red" Delete</span> your cookie</p>
     </div>
 
-    <div id="icons">
+    <div id="joinform">
+        <form id="jform" action="process.php" method="post">
+            <p class="fh1">Login Form:</p>
+            <p>
 
-        <div id="icon1">
-            <a href="create.php"><img src="../images/cm1.jpg" alt="Create!" /> </a>
-        </div>
+                <?php
+                    //Check return code from process.php
+                    if (isset($_GET["rc"])) {
+                        # code...
+                        if ($_GET["rc"] == 1) {
+                            # code...
+                            echo "<p class='login error'>Invalid Username!</p>";
+                        }
+                        if ($_GET["rc"] == 2) {
+                            # code...
+                            echo "<p class='loginerror'>Invalid Password!</p>";
+                        }
+                        if ($_GET["rc"] == 3) {
+                            # code...
+                            echo "<p class='loginerror'>Returns from process.php...</p>";
+                        }
+                    }
 
-        <div id="icon2">
-            <a href="check.php"><img src="../images/cm2.jpg" alt="Check!" /> </a>
-        </div>
+                ?>
+                <!-- username -->
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username"
+                required autofocus
+                placeholder="Enter Username"
+                pattern="[a-zA-Z0-9- !$]{4,15}"
+                title="Username: 4-15 chars, u/"
+                onfocus="messages(this.id)"
+                <br />
 
-        <div id="icon3">
-            <a href="delete.php"><img src="../images/cm3.jpg" alt="Delete!" /> </a>
-        </div>
+                <!-- password -->
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"
+                required
+                placeholder="Enter Password"
+                pattern="[a-zA-Z0-9- !$]{5,15}"
+                title=""
+                onfocus="messages(this.id)"
+                <br />
 
-    </div>
+                <p class="submit">
+                    <input type="submit" value="Login" />
+                    <span class="reset">
 
-
-    <div id="main">
-        <h1>Vincent Nguyen</h1>
-    </div>
 
 
     <p id="jsmsgs"></p>

@@ -71,16 +71,16 @@ body
 	text-align: center;
 }
 
-#form
-{
-	width: 35%;
-	margin: auto;
-	border: thick solid royalblue;
-	border-radius: 15px;
-	box-shadow: 5px 5px 5px 7px rgba(25, 25, 75, .5);
-	margin-top: 5px;
-	padding-left: 5px;
-	background-color: palegreen;
+#jform{
+	width:				35%;
+	margin:				auto;
+	border:				thick double royalblue;
+	border-radius:		15px;
+	box-shadow:			4px		4px		5px		7px		rgba(25,25,75,.5);
+	/*					H off	v off	blur	spread	colors + opacity	*/
+	margin-top:			5px;
+	padding-left:		5px;
+	background-color:	#99ffcc;
 }
 
 #footer
@@ -230,4 +230,33 @@ input:not([type=submit]):not([type=checkbox]):focus:invalid{
 
 .green{
 	color: green;
+}
+
+#icon1{}
+
+#icon2{}
+
+#icon3{
+	float: right;
+	color: red;
+	position: relative;
+}
+
+#registered{
+	color: #228b22;
+	text-align: center;
+	margin: auto;
+	font-style: italic;
+	font-size: 95%;
+	margin-bottom: 10px;
+	
+	
+}
+
+.loginerror{
+	color: #f00;
+	font-style: italic;
+	font-size: 90%;
+	padding-left: 7px;
+	font-weight: bold;
 }
