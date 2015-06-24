@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Assignment 6
+Assignment 8
 create.php
 CIS 425 Summer 2015
 Vincent Nguyen
@@ -12,7 +12,7 @@ Vincent Nguyen
     session_start("customer");
 
     // Check to see if customer is already logged in
-    if (isset($_SESSION['cusotmer']))
+    if (isset($_SESSION['customer']))
     {
         header('Location: welcome.php');
         exit;
@@ -41,26 +41,26 @@ Vincent Nguyen
     <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
-    <title>Vincent Nguyen Login</title>
+    <title>Vincent Nguyen A8</title>
 
   </head>
 
   <body>
     <div id="header">
       <p class="sh1">Vincent Nguyen</p>
-      <p class="sh2">A7:Login</p>
+      <p class="sh2">A8:Login</p>
     </div>
 
     <div id="navigation">
       <p class="sh2">Site Navigation</p>
       <p><a href="../A1/index.htm">Landing Page</a></p>
-      <p><a href="index.htm">A2</a></p>
+      <p><a href="../A2/index.htm">A2</a></p>
       <p><a href="../A3/index.htm">A3</a></p>
-      <p><a href="index.htm">A4</a></p>
-      <p><a href="index.htm">A5</a></p>
-      <p><a href="index.htm">A6</a></p>
-      <p><a href="index.htm">A7</a></p>
-      <p><a href="index.htm">A8</a></p>
+      <p><a href="../A4/index.htm">A4</a></p>
+      <p><a href="../A5/index.htm">A5</a></p>
+      <p><a href="../A6/index.htm">A6</a></p>
+      <p><a href="../A7/index.htm">A7</a></p>
+      <p><a href="login.php">A8</a></p>
       <p><a href="../Project/index.html">Project</a></p>
 
 
@@ -74,14 +74,13 @@ Vincent Nguyen
     </div>
 
     <div id="main">
-    <p class="bold">Fun with Cookies</p>
-    <p>Click an icon below to <span class="green">Create,</span>, check, or
-    <span class="red" Delete</span> your cookie</p>
+    <p class="bold">Are you already Registered?</p>
     </div>
 
     <div id="joinform">
         <form id="jform" action="process.php" method="post">
             <p class="fh1">Login Form:</p>
+            <p>
 
                 <?php
                     //Check return code from process.php
@@ -123,15 +122,17 @@ Vincent Nguyen
                 onfocus="messages(this.id)"
                 <br />
 
-            </p>
-
                 <p class="submit">
                     <input type="submit" value="Login" />
                     <span class="reset">
-                        <input type="reset" value="Clear Form" onclick="history.go(0)" /> </span>
-                        </p>
-                        </form>
-                    </div>
+                        <input type="reset" value="Clear Form!" onclick="history.go(0)" />
+                    </span>
+                    </p>
+                </p>
+
+                </form>
+            </div>
+
 
 
 

@@ -50,14 +50,15 @@ Vincent Nguyen
 
     <div id="navigation">
       <p class="sh2">Site Navigation</p>
-      <p><a href="../A1/index.htm">Landing Page</a></p>
-      <p><a href="index.htm">A2</a></p>
+      <p><a href="../index.htm">Landing Page</a></p>
+      <p><a href="../A2/index.htm">A2</a></p>
       <p><a href="../A3/index.htm">A3</a></p>
-      <p><a href="index.htm">A4</a></p>
-      <p><a href="index.htm">A5</a></p>
+      <p><a href="../A4/index.htm">A4</a></p>
+      <p><a href="../A5/index.htm">A5</a></p>
       <p><a href="index.htm">A6</a></p>
-      <p><a href="index.htm">A7</a></p>
-      <p><a href="index.htm">A8</a></p>
+      <p><a href="../A7/index.htm">A7</a></p>
+      <p><a href="../A8/index.htm">A8</a></p>
+      <p><a href="../A9/index.htm">A9</a></p>
       <p><a href="../Project/index.html">Project</a></p>
 
 

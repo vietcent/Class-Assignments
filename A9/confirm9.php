@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <!--
-Assignment 6
-create.php
+Assignment 8
+confirm8.php
 CIS 425 Summer 2015
 Vincent Nguyen
 -->
 
 <?php
-    //Start a PHP Session
-    session_name("customer");
-    session_start("customer");
+    // Start a PHP Session
+    // Set default timezone
 
-    // Check to see if customer is already logged in
-    if (isset($_SESSION['cusotmer']))
-    {
-        header('Location: welcome.php');
-        exit;
-    }
+    date_default_timezone_set('MST');
 
+    // Connect to mySQL
+    include('connect/serverconnect.php');
+    // include('connect/localconnect.php');
+
+    // Get the user-entered data from our HTML index (registration page)
+
+    $name       = $_POST['name'];
+    $name2      = mysqli_real_escape_string($dbc, $name);
+    $password   = $_POST['password'];
+    $username   = $_POST['username'];
+    $email      = $_POST['email'];
+    $probation  = @$_POST['probation'];
+    $hotornot   = $_POST['hotornot'];
+    $smartornot = $_POST['smartornot'];
+    $beers      = $_POST['beers'];
+    $comments   = mysqli_real_escape_string($dbc, $_POST['comments']);
+
+    // Build SQL statement to populate the table
+    $query =
+    'insert into hw8(name, username, password, email, probation, comments)'
+    .
+    'values("$name2", "$username", "$password", "$email", "$probation", "$comments")';
+
+    // Run the query
+    $result = mysqli_query($dbc, $query) or die ('Unable to write to database!');
+
+    // Close the database connection
+    mysqli_close($dbc);
 ?>
 <!-- End of PHP Session -->
 
@@ -27,6 +49,7 @@ Vincent Nguyen
     <!-- Meta tag -->
     <meta name="robots" content="noindex, nofollow" />
     <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="5;url=A9/login.php" />
 
     <!-- Link tag for CSS -->
     <link type="text/css" rel="stylesheet" href="../stylesheets/css3.css" />
@@ -38,10 +61,10 @@ Vincent Nguyen
     <!-- JavaScript tags -->
     <!--<script type="text/javascript" src="../jscode/a3Focus.js"></script>
     <script type="text/javascript" src="../jscode/a3Validate.js"></script>-->
-    <script type="text/javascript" src="../jscode/messages.js"></script>
+    <script type="text/javascript" src="../jscode/messages.js"> </script>
 
     <!-- Web Page Title -->
-    <title>Vincent Nguyen Login</title>
+    <title>Vincent Nguyen Confirmation Page</title>
 
   </head>
 
@@ -56,11 +79,11 @@ Vincent Nguyen
       <p><a href="../A1/index.htm">Landing Page</a></p>
       <p><a href="index.htm">A2</a></p>
       <p><a href="../A3/index.htm">A3</a></p>
-      <p><a href="index.htm">A4</a></p>
-      <p><a href="index.htm">A5</a></p>
-      <p><a href="index.htm">A6</a></p>
-      <p><a href="index.htm">A7</a></p>
-      <p><a href="index.htm">A8</a></p>
+      <p><a href="../A4/index.htm">A4</a></p>
+      <p><a href="../A5/index.htm">A5</a></p>
+      <p><a href="../A6/index.htm">A6</a></p>
+      <p><a href="../A7index.htm">A7</a></p>
+      <p><a href="../A8/login.php">A8</a></p>
       <p><a href="../Project/index.html">Project</a></p>
 
 
@@ -74,9 +97,31 @@ Vincent Nguyen
     </div>
 
     <div id="main">
-    <p class="bold">Fun with Cookies</p>
-    <p>Click an icon below to <span class="green">Create,</span>, check, or
-    <span class="red" Delete</span> your cookie</p>
+        <p>
+            <?php
+                $time = date("G");
+                if ($time < "12" && $time > "5") {
+                    # code...
+                    echo "Good Morning " . $name . " - Thank you for registering!";
+                }
+                elseif ($time < "17" && $time > "12") {
+                    # code...
+                    echo "Good Afternoon " . $name . " - Thank you for registering!";
+                }
+                elseif ($time > "17" && $time < "22") {
+                    # code...
+                    echo "Good Evening " . $name . " - Thank you for registering!";
+                }
+                else {
+                    # code...
+                    echo "What are you doing awake " . $name . "? - but thank you for registering";
+                }
+            ?>
+        </p>
+        <p>Thank you for registering!</p>
+        <p>Your information has been added to our database!</p>
+        <p>You may click the "Login Now!" link below, or this page will automatically re-direct you to the Login page in 5 seconds...</p>
+        <p><a href="login.php">Login Now!</a></p>
     </div>
 
     <div id="joinform">
@@ -102,7 +147,6 @@ Vincent Nguyen
                     }
 
                 ?>
-                <p>
                 <!-- username -->
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username"
@@ -123,15 +167,15 @@ Vincent Nguyen
                 onfocus="messages(this.id)"
                 <br />
 
-            </p>
-
                 <p class="submit">
                     <input type="submit" value="Login" />
                     <span class="reset">
-                        <input type="reset" value="Clear Form" onclick="history.go(0)" /> </span>
-                        </p>
-                        </form>
-                    </div>
+                        <input type="reset" value="Clear Form!" onclick="history.go(0)" />
+                    </span>
+                    </p>
+
+                </form>
+            </div>
 
 
 

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <!--
-Assignment 6
-create.php
+Assignment 8
+welcome.php
 CIS 425 Summer 2015
 Vincent Nguyen
 -->
 
 <?php
     //Start a PHP Session
-    session_start("cookie");
+    session_name("customer");
+    session_start("customer");
 
-    //Establish cookie (name, value, expiration of cookie, path, domain)
-    $name  = 'oreo';
-    $value = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
-    $now   =  time();
-    $exp    = time() + 10;
-    setcookie($name, $value, $exp);
+    // Check to see if customer is already logged in
+    if (isset($_SESSION['customer']))
+    {
+        header('Location: welcome.php');
+        exit;
+    }
+
 ?>
 <!-- End of PHP Session -->
 
@@ -39,27 +41,27 @@ Vincent Nguyen
     <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
-    <title>Vincent Nguyen A6 PHP Create</title>
+    <title>Vincent Nguyen A8 Welcome Page</title>
 
   </head>
 
   <body>
     <div id="header">
       <p class="sh1">Vincent Nguyen</p>
-      <p class="sh2">A6:Create</p>
+      <p class="sh2">A8:Welcome Page</p>
     </div>
 
     <div id="navigation">
       <p class="sh2">Site Navigation</p>
-      <p><a href="../A1/index.htm">Landing Page</a></p>
+      <p><a href="../index.htm">Landing Page</a></p>
       <p><a href="../A2/index.htm">A2</a></p>
       <p><a href="../A3/index.htm">A3</a></p>
       <p><a href="../A4/index.htm">A4</a></p>
       <p><a href="../A5/index.htm">A5</a></p>
-      <p><a href="index.htm">A6</a></p>
+      <p><a href="../A6/index.htm">A6</a></p>
       <p><a href="../A7/index.htm">A7</a></p>
       <p><a href="../A8/index.htm">A8</a></p>
-      <p><a href="../A9//index.htm">A9</a></p>
+      <p><a href="../A9/index.htm">A9</a></p>
       <p><a href="../Project/index.html">Project</a></p>
 
 
@@ -73,43 +75,29 @@ Vincent Nguyen
     </div>
 
     <div id="main">
-    <p class="bold">Fun with Cookies</p>
-    <p>Click an icon below to <span class="green">Create,</span>, check, or
-    <span class="red" Delete</span> your cookie</p>
+    <p class="bold">Login Successful!</p>
     </div>
 
-    <div id="icons">
+    <div id="joinform">
+        <form id="jform" action="logout.php" method="post">
+            <p>
 
-        <!--<div id="icon1">
-            <a href="create.php"><img src="../images/cm1.jpg" alt="Create!" /> </a>
-        </div>-->
+                <?php
+                    echo "Hello! You are logged in as ' . $_SESSION['customer']''.'";
 
-        <div id="icon2">
-            <a href="index.htm"><img src="../images/cm4.jpg" alt="Return!" /> </a>
-        </div>
 
-        <!-- PHP starts -->
-        <?php
-            // Display our cookie
-            if(count($_Cookie) > 0)
-            {
-              date_default_timezone_set('MST');
-              echo 'Cookie: <span class="red">' . $value . '</span> has been created! <br />';
-              echo 'Cookie Created: ' . date('D M j\, Y H:i:s',$now) . '<br />';
-              echo 'Cookie Expires: ' . date('D M j\, Y H:i:s', $exp);
-            }
-            else
-            {
-              echo 'Cookies are disabled!';
-            }
-        ?>
-        <!-- PHP ends -->
+                ?>
+            </p>
 
-        <!--<div id="icon3">
-            <a href="delete.php"><img src="../images/cm3.jpg" alt="Delete!" /> </a>
-        </div>-->
 
-    </div>
+                <p class="submit">
+                    <input type="submit" value="Logout" />
+                </p>
+
+                </form>
+            </div>
+
+
 
 
     <p id="jsmsgs"></p>

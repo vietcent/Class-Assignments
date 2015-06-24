@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Assignment 6
+Assignment 8
 create.php
 CIS 425 Summer 2015
 Vincent Nguyen
@@ -41,26 +41,27 @@ Vincent Nguyen
     <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
-    <title>Vincent Nguyen Login</title>
+    <title>Vincent Nguyen Login Page</title>
 
   </head>
 
   <body>
     <div id="header">
       <p class="sh1">Vincent Nguyen</p>
-      <p class="sh2">A7:Login</p>
+      <p class="sh2">A8:Login</p>
     </div>
 
     <div id="navigation">
       <p class="sh2">Site Navigation</p>
       <p><a href="../A1/index.htm">Landing Page</a></p>
-      <p><a href="index.htm">A2</a></p>
+      <p><a href="../A2/index.htm">A2</a></p>
       <p><a href="../A3/index.htm">A3</a></p>
-      <p><a href="index.htm">A4</a></p>
-      <p><a href="index.htm">A5</a></p>
-      <p><a href="index.htm">A6</a></p>
-      <p><a href="index.htm">A7</a></p>
-      <p><a href="index.htm">A8</a></p>
+      <p><a href="../A4/index.htm">A4</a></p>
+      <p><a href="../A5/index.htm">A5</a></p>
+      <p><a href="../A6/index.htm">A6</a></p>
+      <p><a href="../A7/index.htm">A7</a></p>
+      <p><a href="login.php">A8</a></p>
+      <p><a href="index.php">A9</a></p>
       <p><a href="../Project/index.html">Project</a></p>
 
 
@@ -74,34 +75,32 @@ Vincent Nguyen
     </div>
 
     <div id="main">
-    <p class="bold">Fun with Cookies</p>
-    <p>Click an icon below to <span class="green">Create,</span>, check, or
-    <span class="red" Delete</span> your cookie</p>
     </div>
 
     <div id="joinform">
-        <form id="jform" action="process.php" method="post">
+        <form id="jform" action="confirm9.php" method="post">
             <p class="fh1">Login Form:</p>
 
-                <?php
-                    //Check return code from process.php
-                    if (isset($_GET["rc"])) {
+            <?php
+                //Check return code from process.php
+                if (isset($_GET["rc"])) {
+                    # code...
+                    if ($_GET["rc"] == 1) {
                         # code...
-                        if ($_GET["rc"] == 1) {
-                            # code...
-                            echo "<p class='login error'>Invalid Username!</p>";
-                        }
-                        if ($_GET["rc"] == 2) {
-                            # code...
-                            echo "<p class='loginerror'>Invalid Password!</p>";
-                        }
-                        if ($_GET["rc"] == 3) {
-                            # code...
-                            echo "<p class='loginerror'>Returns from process.php...</p>";
-                        }
+                        echo "<p class='login error'>Invalid Username!</p>";
                     }
+                    if ($_GET["rc"] == 2) {
+                        # code...
+                        echo "<p class='loginerror'>Invalid Password!</p>";
+                    }
+                    if ($_GET["rc"] == 3) {
+                        # code...
+                        echo "<p class='loginerror'>Returns from process.php...</p>";
+                    }
+                }
 
-                ?>
+            ?>
+
                 <p>
                 <!-- username -->
                 <label for="username">Username</label>
@@ -123,15 +122,13 @@ Vincent Nguyen
                 onfocus="messages(this.id)"
                 <br />
 
-            </p>
-
                 <p class="submit">
                     <input type="submit" value="Login" />
                     <span class="reset">
-                        <input type="reset" value="Clear Form" onclick="history.go(0)" /> </span>
-                        </p>
-                        </form>
-                    </div>
+                        <input type="clear" value="Clear Form"
+                    </span>
+                </form>
+            </p>
 
 
 

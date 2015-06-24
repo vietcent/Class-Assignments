@@ -32,7 +32,7 @@ Vincent Nguyen
     <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
-    <title>Vincent Nguyen PHP Check</title>
+    <title>Vincent Nguyen A6 PHP Check</title>
 
   </head>
 
@@ -66,8 +66,7 @@ Vincent Nguyen
 
     <div id="main">
     <p class="bold">Fun with Cookies</p>
-    <p>Click an icon below to <span class="green">Create,</span>, check, or
-    <span class="red" Delete</span> your cookie</p>
+    <p>Checking Cookie</p>
     </div>
 
     <div id="icons">
@@ -77,7 +76,9 @@ Vincent Nguyen
         </div>-->
 
         <div id="icon2">
-            <a href="index.htm"><img src="../images/cm4.jpg" alt="Check!" /> </a>
+            <a href="index.htm"><img src="../images/cm4.jpg" alt="Return!" /> </a>
+            <br>
+            Click here to return!
         </div>
 
         <!-- PHP starts -->

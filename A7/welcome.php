@@ -41,14 +41,14 @@ Vincent Nguyen
     <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
-    <title>Vincent Nguyen Login</title>
+    <title>Vincent Nguyen Welcome Page</title>
 
   </head>
 
   <body>
     <div id="header">
       <p class="sh1">Vincent Nguyen</p>
-      <p class="sh2">A7:Login</p>
+      <p class="sh2">A7: Welcome Page</p>
     </div>
 
     <div id="navigation">
@@ -78,7 +78,7 @@ Vincent Nguyen
     </div>
 
     <div id="joinform">
-        <form id="jform" action="login.php" method="post">
+        <form id="jform" action="logout.php" method="post">
             <p>
                 <?php
                     echo 'Hello! You are logged in as ' . $_SESSION['customer'] . '.';

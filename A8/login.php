@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
-Assignment 6
-create.php
+Assignment 8
+login.php
 CIS 425 Summer 2015
 Vincent Nguyen
 -->
@@ -41,26 +41,27 @@ Vincent Nguyen
     <script type="text/javascript" src="../jscode/messages.js"></script>
 
     <!-- Web Page Title -->
-    <title>Vincent Nguyen Login</title>
+    <title>Vincent Nguyen Login Page</title>
 
   </head>
 
   <body>
     <div id="header">
       <p class="sh1">Vincent Nguyen</p>
-      <p class="sh2">A7:Login</p>
+      <p class="sh2">A8:Login</p>
     </div>
 
     <div id="navigation">
       <p class="sh2">Site Navigation</p>
-      <p><a href="../A1/index.htm">Landing Page</a></p>
-      <p><a href="index.htm">A2</a></p>
+      <p><a href="index.htm">Landing Page</a></p>
+      <p><a href="../A2/index.htm">A2</a></p>
       <p><a href="../A3/index.htm">A3</a></p>
-      <p><a href="index.htm">A4</a></p>
-      <p><a href="index.htm">A5</a></p>
-      <p><a href="index.htm">A6</a></p>
-      <p><a href="index.htm">A7</a></p>
-      <p><a href="index.htm">A8</a></p>
+      <p><a href="../A4/index.htm">A4</a></p>
+      <p><a href="../A5/index.htm">A5</a></p>
+      <p><a href="../A6/index.htm">A6</a></p>
+      <p><a href="../A7/index.htm">A7</a></p>
+      <p><a href="../A8/index.htm">A8</a></p>
+      <p><a href="../A9/index.htm">A9</a></p>
       <p><a href="../Project/index.html">Project</a></p>
 
 
@@ -74,9 +75,7 @@ Vincent Nguyen
     </div>
 
     <div id="main">
-    <p class="bold">Fun with Cookies</p>
-    <p>Click an icon below to <span class="green">Create,</span>, check, or
-    <span class="red" Delete</span> your cookie</p>
+    <p>Please enter your username and password below to login</p>
     </div>
 
     <div id="joinform">
@@ -109,7 +108,7 @@ Vincent Nguyen
                 required autofocus
                 placeholder="Enter Username"
                 pattern="[a-zA-Z0-9- !$]{4,15}"
-                title="Username: 4-15 chars, u/"
+                title="Username: 4-15 chars, u/l case letters, numbers and -, _, !, $ only!"
                 onfocus="messages(this.id)"
                 <br />
 
@@ -122,17 +121,14 @@ Vincent Nguyen
                 title=""
                 onfocus="messages(this.id)"
                 <br />
-
             </p>
 
-                <p class="submit">
-                    <input type="submit" value="Login" />
-                    <span class="reset">
-                        <input type="reset" value="Clear Form" onclick="history.go(0)" /> </span>
-                        </p>
-                        </form>
-                    </div>
-
+            <p class="submit">
+    			<input type="submit" value="Login!" />
+    			<span class="reset"><input type="reset" value="Clear Form!" onclick="history.go(0)" /></span>
+            </p>
+        </form>
+    </div>
 
 
     <p id="jsmsgs"></p>
